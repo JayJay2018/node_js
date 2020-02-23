@@ -35,11 +35,7 @@ const requestHandler = http.createServer((req, res) => {
       user = parsedBody.split('=')[1];
       console.log(user);
       res.statusCode = 302;
-      res.setHeader('Location', '/users')
-      res.write('<html>');
-      res.write('<head><title>Created user successfully</title></head>');
-      res.write('<body><h1>Creation successful</h1></body>');
-      res.write('</html>');
+      res.setHeader('Location', '/users');
       return res.end();
     })
   }
