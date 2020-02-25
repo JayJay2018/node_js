@@ -1,6 +1,4 @@
-const http = require('http');
-
-const requestHandler = http.createServer((req, res) => {
+const requestHandler = (req, res) => {
   // console.log('hello');
   const url = req.url;
   const method = req.method;
@@ -39,9 +37,9 @@ const requestHandler = http.createServer((req, res) => {
       return res.end();
     })
   }
-})
+};
 
-requestHandler.listen(3000);
+// requestHandler.listen(3000);
 
 exports.handler = requestHandler;
 exports.someText = 'Hardcoded shit.'

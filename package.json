@@ -2,10 +2,10 @@
   "name": "nodejs_tutorial",
   "version": "1.0.0",
   "description": "Getting more advanced with node.js",
-  "main": "first-app.js",
+  "main": "first-assignment.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node first-assignment.js",
+    "start": "node app.js",
     "start-server": "node first-assignment.js"
   },
   "repository": {
