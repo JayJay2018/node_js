@@ -6,6 +6,7 @@ const app = express();
 
 app.use((req, res, next) => {
   console.log('Hello from middleware 1');
+  next();
 })
 
 app.use((req, res, next) => {
@@ -13,4 +14,4 @@ app.use((req, res, next) => {
 })
 
 const server = http.createServer(app);
-server.listen(3000);
+server.listen(4200);

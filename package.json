@@ -5,7 +5,7 @@
   "main": "first-assignment.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "node express-example/app.js",
     "start-server": "node first-assignment.js"
   },
   "repository": {
