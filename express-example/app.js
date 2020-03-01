@@ -19,5 +19,9 @@ app.use('/', (req, res, next) => {
 app.use(adminRoutes);
 app.use(userRoutes);
 
+app.use((req, res, next) => {
+  return res.status(404).send('<h2>Sorry, path not found</h2>')
+})
+
 const server = http.createServer(app);
 server.listen(4200);
