@@ -1,6 +1,6 @@
 const express = require('express');
 
-const router = require('router');
+const router = express.Router();
 
 router.get('/add-product', (req, res, next) => {
   console.log('Hello from another middleware')
