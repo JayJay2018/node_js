@@ -4,6 +4,7 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
+const path = require('path');
 const adminRoutes = require('./routes/admin');
 const userRoutes = require('./routes/shop');
 
@@ -20,7 +21,7 @@ app.use('/admin', adminRoutes);
 app.use(userRoutes);
 
 app.use((req, res, next) => {
-  return res.status(404).send('<h2>Sorry, path not found</h2>')
+  return res.sendFile(path.join(__dirname, 'views', '404.html'))
 })
 
 const server = http.createServer(app);
