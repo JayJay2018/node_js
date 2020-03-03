@@ -11,6 +11,7 @@ const userRoutes = require('./routes/shop');
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}))
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', (req, res, next) => {
   console.log('Hello from middleware 1 that always runs');
